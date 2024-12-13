@@ -403,9 +403,7 @@
         }
       },
       "extract": {
-        "exclude": [
-          "META-INF/"
-        ]
+        "exclude": ["META-INF/"]
       },
       "name": "org.lwjgl.lwjgl:lwjgl-platform:2.9.4-nightly-20150209",
       "natives": {
@@ -487,9 +485,7 @@
         }
       },
       "extract": {
-        "exclude": [
-          "META-INF/"
-        ]
+        "exclude": ["META-INF/"]
       },
       "name": "org.lwjgl.lwjgl:lwjgl-platform:2.9.2-nightly-20140822",
       "natives": {
@@ -530,9 +526,7 @@
         }
       },
       "extract": {
-        "exclude": [
-          "META-INF/"
-        ]
+        "exclude": ["META-INF/"]
       },
       "name": "net.java.jinput:jinput-platform:2.0.5",
       "natives": {
@@ -582,9 +576,7 @@
         }
       },
       "extract": {
-        "exclude": [
-          "META-INF/"
-        ]
+        "exclude": ["META-INF/"]
       },
       "name": "com.mojang:text2speech:1.10.3",
       "natives": {
@@ -622,9 +614,7 @@
         }
       },
       "extract": {
-        "exclude": [
-          "META-INF/"
-        ]
+        "exclude": ["META-INF/"]
       },
       "name": "ca.weblite:java-objc-bridge:1.0.0",
       "natives": {

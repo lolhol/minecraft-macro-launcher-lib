@@ -1,29 +1,26 @@
-
 import * as uuid from 'uuid';
 
 export interface IAuth {
-    accessToken: string;
-    user: {
-        name: string;
-        type: string;
-        uuid: string;
-        properties: {
-            [prop: number]: { name: string; value: string };
-        };
+  accessToken: string;
+  user: {
+    name: string;
+    type: string;
+    uuid: string;
+    properties: {
+      [prop: number]: { name: string; value: string };
     };
+  };
 }
 
 export interface IAuthProvider {
-    getAuth(): IAuth;
+  getAuth(): IAuth;
 }
 
 export abstract class Authenticator {
-
-    /**
-     * Generate a random token (by UUID v4).
-     * @returns a random token.
-     */
-    static generateToken = (replaceSep = true, sep = ''): string => replaceSep ? uuid.v4().replace(/-/g, sep) : uuid.v4();
-
+  /**
+   * Generate a random token (by UUID v4).
+   * @returns a random token.
+   */
+  static generateToken = (replaceSep = true, sep = ''): string =>
+    replaceSep ? uuid.v4().replace(/-/g, sep) : uuid.v4();
 }
-

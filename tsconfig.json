@@ -1,22 +1,13 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "strict": true,
-    "declaration": true,
+    "target": "ES6",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "esModuleInterop": true,
-    "outDir": "lib",
-    "lib": [
-      "esnext"
-    ]
+    "strict": true,
+    "lib": ["es2016", "dom"]
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "examples"]
 }

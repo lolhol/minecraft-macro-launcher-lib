@@ -1,39 +1,37 @@
-
 import { join } from 'path';
 
 export interface IFolder {
-    root: string;
+  root: string;
 }
 
 export class Folder implements IFolder {
+  static from(location: Location): Folder {
+    if (location instanceof Folder) return location;
 
-    static from(location: Location): Folder {
-        if (location instanceof Folder) return location;
-
-        switch (typeof location) {
-            case 'string': return new Folder(location);
-            case 'object': {
-                if (location.root) return new Folder(location.root);
-            }
-        }
-
-        throw new Error('missing folder path');
+    switch (typeof location) {
+      case 'string':
+        return new Folder(location);
+      case 'object': {
+        if (location.root) return new Folder(location.root);
+      }
     }
 
-    constructor(public root: string) { }
+    throw new Error('missing folder path');
+  }
 
-    join(...parts: string[]): string {
-        return join(this.root, ...parts);
-    }
+  constructor(public root: string) {}
 
-    toString(): string {
-        return this.root;
-    }
+  join(...parts: string[]): string {
+    return join(this.root, ...parts);
+  }
 
-    toJSON(): string {
-        return this.root;
-    }
+  toString(): string {
+    return this.root;
+  }
 
+  toJSON(): string {
+    return this.root;
+  }
 }
 
 export type Location = string | Partial<IFolder>;
